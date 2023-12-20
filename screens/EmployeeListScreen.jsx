@@ -18,7 +18,7 @@ export default function EmployeeListScreen({ navigation }) {
             );
             dispatch(setEmployees(response?.data));
         } catch (error) {
-            console.error('Error during search:', error);
+            console.error('Ошибка поиска:', error);
         }
     };
 
@@ -29,7 +29,7 @@ export default function EmployeeListScreen({ navigation }) {
                     const response = await axiosInstance.get('/employees');
                     dispatch(setEmployees(response?.data));
                 } catch (error) {
-                    console.error('Error fetching employees:', error);
+                    console.error('Ошибка возвращения сотрудников:', error);
                 }
             }
             console.log('useeff');
